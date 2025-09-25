@@ -73,8 +73,7 @@ def extract_features(segment, fs):
 # =======================
 st.title("📊 Machining Chatter Detection App")
 
-# Load trained model automatically
-MODEL_PATH = "voting_model.pkl"  # change if stored elsewhere
+MODEL_PATH = os.path.join(os.path.dirname(__file__), "voting_model.pkl")
 try:
     model = joblib.load(MODEL_PATH)
     st.success("✅ Model loaded successfully")
